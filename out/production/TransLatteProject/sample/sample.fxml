@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #2e3348;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="97.0" prefWidth="728.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <Label layoutX="14.0" layoutY="13.0" text="TransLatte" textFill="#451c6b">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="63.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="64.0" fitWidth="63.0" layoutX="342.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/latte-cup.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="translateButton" layoutX="1020.0" layoutY="122.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="156.0" text="Go">
+         <font>
+            <Font name="Arial Unicode MS" size="25.0" />
+         </font>
+      </Button>
+      <TextField fx:id="textToTranslateField" layoutX="156.0" layoutY="122.0" prefHeight="54.0" prefWidth="538.0" promptText="Paste a word or else....">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </TextField>
+      <VBox layoutX="14.0" layoutY="122.0" prefHeight="108.0" prefWidth="137.0">
+         <children>
+            <MenuButton fx:id="menuButton" mnemonicParsing="false" prefHeight="54.0" prefWidth="123.0" text="Select Language">
+               <items>
+                  <RadioMenuItem fx:id="radioMenuItem_ar" mnemonicParsing="false" text="Arabic" />
+                  <RadioMenuItem fx:id="radioMenuItem_de" mnemonicParsing="false" text="German" />
+                  <RadioMenuItem fx:id="radioMenuItem_en" mnemonicParsing="false" selected="true" text="English" />
+                  <RadioMenuItem fx:id="radioMenuItem_fr" mnemonicParsing="false" text="French" />
+                  <RadioMenuItem fx:id="radioMenuItem_it" mnemonicParsing="false" text="Italian" />
+                  <RadioMenuItem fx:id="radioMenuItem_es" mnemonicParsing="false" text="Spanish" />
+                  <RadioMenuItem fx:id="radioMenuItem_pl" mnemonicParsing="false" text="Polish" />
+                  <RadioMenuItem fx:id="radioMenuItem_ru" mnemonicParsing="false" text="Russian" />
+               </items>
+            </MenuButton>
+         </children>
+      </VBox>
+      <CheckBox fx:id="checkBox_ru" layoutX="720.0" layoutY="132.0" mnemonicParsing="false" text="Russian" textFill="WHITE" />
+      <CheckBox fx:id="checkBox_en" layoutX="720.0" layoutY="159.0" mnemonicParsing="false" text="English" textFill="WHITE" />
+      <CheckBox fx:id="checkBox_pl" layoutX="791.0" layoutY="132.0" mnemonicParsing="false" text="Polish" textFill="WHITE" />
+      <CheckBox fx:id="checkBox_de" layoutX="791.0" layoutY="159.0" mnemonicParsing="false" text="German" textFill="WHITE" />
+      <CheckBox fx:id="checkBox_fr" layoutX="862.0" layoutY="132.0" mnemonicParsing="false" text="French" textFill="WHITE" />
+      <CheckBox fx:id="checkBox_it" layoutX="862.0" layoutY="159.0" mnemonicParsing="false" text="Italian" textFill="WHITE" />
+      <CheckBox fx:id="checkBox_es" layoutX="929.0" layoutY="132.0" mnemonicParsing="false" text="Spanish" textFill="WHITE" />
+      <CheckBox fx:id="checkBox_ar" layoutX="929.0" layoutY="159.0" mnemonicParsing="false" text="Arabic" textFill="WHITE" />
+      <Label layoutX="769.0" layoutY="105.0" text="Please, select up to 4 languages:" textFill="WHITE" />
+      <AnchorPane layoutX="14.0" layoutY="219.0" prefHeight="361.0" prefWidth="1173.0" style="-fx-background-color: #232635;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0">
+         <children>
+            <Label fx:id="lanlabel1" layoutX="15.0" layoutY="25.0" prefHeight="15.0" prefWidth="60.0" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lanlabel2" layoutX="15.0" layoutY="105.0" prefHeight="15.0" prefWidth="60.0" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="105.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lanlabel3" layoutX="15.0" layoutY="185.0" prefHeight="15.0" prefWidth="60.0" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lanlabel4" layoutX="15.0" layoutY="265.0" prefHeight="15.0" prefWidth="60.0" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="transResult1" layoutX="45.0" layoutY="48.0" prefHeight="40.0" style="-fx-background-color: #232635; -fx-text-fill: white;" AnchorPane.bottomAnchor="281.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="transResult2" layoutX="5.0" layoutY="120.0" prefHeight="40.0" style="-fx-background-color: #232635; -fx-text-fill: white;" AnchorPane.bottomAnchor="201.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="transResult3" layoutX="25.0" layoutY="130.0" prefHeight="40.0" style="-fx-background-color: #232635; -fx-text-fill: white;" AnchorPane.bottomAnchor="121.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="200.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="transResult4" layoutX="35.0" layoutY="140.0" prefHeight="40.0" style="-fx-background-color: #232635; -fx-text-fill: white;" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="280.0">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <Button fx:id="addWordToDictionaryButton" layoutX="937.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="228.0" text="Add word to personal dictionary" />
+      <AnchorPane fx:id="anchorPaneAddWord" layoutX="693.0" layoutY="-2.0" prefHeight="97.0" prefWidth="507.0" style="-fx-background-color: #fafafa;" visible="false">
+         <children>
+            <TextField fx:id="textFieldAddWord1" layoutX="63.0" layoutY="19.0" visible="false" />
+            <TextField fx:id="textFieldAddWord2" layoutX="300.0" layoutY="19.0" visible="false" />
+            <Button fx:id="buttonAddWord1" layoutX="190.0" layoutY="58.0" mnemonicParsing="false" style="-fx-background-color: #2e3348;" text="Add word pair" textFill="WHITE" visible="false" />
+            <MenuButton fx:id="menuButton2" layoutX="31.0" layoutY="19.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="2.0" style="-fx-background-color: #2e3348;" visible="false">
+               <items>
+                  <RadioMenuItem fx:id="radioMenuItem_ar1" mnemonicParsing="false" text="Arabic">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroupLeft" />
+                     </toggleGroup></RadioMenuItem>
+                  <RadioMenuItem fx:id="radioMenuItem_de1" mnemonicParsing="false" text="German" toggleGroup="$toggleGroupLeft" />
+                  <RadioMenuItem fx:id="radioMenuItem_en1" mnemonicParsing="false" selected="true" text="English" toggleGroup="$toggleGroupLeft" />
+                  <RadioMenuItem fx:id="radioMenuItem_fr1" mnemonicParsing="false" text="French" toggleGroup="$toggleGroupLeft" />
+                  <RadioMenuItem fx:id="radioMenuItem_it1" mnemonicParsing="false" text="Italian" toggleGroup="$toggleGroupLeft" />
+                  <RadioMenuItem fx:id="radioMenuItem_es1" mnemonicParsing="false" text="Spanish" toggleGroup="$toggleGroupLeft" />
+                  <RadioMenuItem fx:id="radioMenuItem_pl1" mnemonicParsing="false" text="Polish" toggleGroup="$toggleGroupLeft" />
+                  <RadioMenuItem fx:id="radioMenuItem_ru1" mnemonicParsing="false" text="Russian" toggleGroup="$toggleGroupLeft" />
+               </items>
+            </MenuButton>
+            <MenuButton fx:id="menuButton21" layoutX="270.0" layoutY="19.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="2.0" style="-fx-background-color: #2e3348;" visible="false">
+               <items>
+                  <RadioMenuItem fx:id="radioMenuItem_ar11" mnemonicParsing="false" text="Arabic">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroupRight" />
+                     </toggleGroup></RadioMenuItem>
+                  <RadioMenuItem fx:id="radioMenuItem_de11" mnemonicParsing="false" text="German" toggleGroup="$toggleGroupRight" />
+                  <RadioMenuItem fx:id="radioMenuItem_en11" mnemonicParsing="false" selected="true" text="English" toggleGroup="$toggleGroupRight" />
+                  <RadioMenuItem fx:id="radioMenuItem_fr11" mnemonicParsing="false" text="French" toggleGroup="$toggleGroupRight" />
+                  <RadioMenuItem fx:id="radioMenuItem_it11" mnemonicParsing="false" text="Italian" toggleGroup="$toggleGroupRight" />
+                  <RadioMenuItem fx:id="radioMenuItem_es11" mnemonicParsing="false" text="Spanish" toggleGroup="$toggleGroupRight" />
+                  <RadioMenuItem fx:id="radioMenuItem_pl11" mnemonicParsing="false" text="Polish" toggleGroup="$toggleGroupRight" />
+                  <RadioMenuItem fx:id="radioMenuItem_ru11" mnemonicParsing="false" text="Russian" toggleGroup="$toggleGroupRight" />
+               </items>
+            </MenuButton>
+            <Button fx:id="closeAddWordButton" layoutX="483.0" layoutY="2.0" mnemonicParsing="false" style="-fx-background-color: #2e3348;" text="X" textFill="WHITE" visible="false" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="repeatWordsButton" layoutX="937.0" layoutY="56.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="228.0" text="Repeat words from personal dictionary" />
+   </children>
+</AnchorPane>
