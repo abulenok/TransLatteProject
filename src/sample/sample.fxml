@@ -34,7 +34,7 @@
             <Font name="Arial Unicode MS" size="25.0" />
          </font>
       </Button>
-      <TextField fx:id="textToTranslateField" layoutX="156.0" layoutY="122.0" prefHeight="54.0" prefWidth="538.0" promptText="Paste a word or else....">
+      <TextField fx:id="textToTranslateField" layoutX="156.0" layoutY="122.0" prefHeight="54.0" prefWidth="538.0" promptText="Paste a word....">
          <font>
             <Font size="23.0" />
          </font>

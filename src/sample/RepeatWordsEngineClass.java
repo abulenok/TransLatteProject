@@ -9,10 +9,12 @@ public class RepeatWordsEngineClass {
     private Vector<String> wordsSetStartLang;
     private String langUserTransFrom;
     private String langUserTransTo;
+    private int numberOfWordsToRepeat;
 
-    public RepeatWordsEngineClass(String lStartFrom, String lStartTo) throws SQLException, ClassNotFoundException {
+    public RepeatWordsEngineClass(String lStartFrom, String lStartTo, int wNum) throws SQLException, ClassNotFoundException {
         langUserTransFrom = lStartFrom;
         langUserTransTo = lStartTo;
+        numberOfWordsToRepeat = wNum;
         dbhandler.getDbConnection();
         dbhandler.checkDBIfExistsandCreate();
     }
@@ -46,7 +48,7 @@ public class RepeatWordsEngineClass {
     }
     public void createWordsSetOfStartLanguage() throws SQLException, ClassNotFoundException {
 
-        wordsSetStartLang = dbhandler.getWordsSetStartLang(langUserTransFrom, 10);
+        wordsSetStartLang = dbhandler.getWordsSetStartLang(langUserTransFrom, numberOfWordsToRepeat);
 
         deleteWordsWithoutTranslInChosenLang(langUserTransTo);
     }

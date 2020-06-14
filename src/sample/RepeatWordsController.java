@@ -89,12 +89,20 @@ public class RepeatWordsController {
     private Text textLanTo1;
 
     @FXML
+    private TextField textFieldNumberofWords;
+
+    @FXML
+    private Text textNumWords;
+
+    @FXML
     void initialize() {
 
         startTestButton.setOnAction(event->{
             startTestButton.setVisible(false);
             menuButton1.setVisible(false);
             menuButton21.setVisible(false);
+            textFieldNumberofWords.setVisible(false);
+            textNumWords.setVisible(false);
             textFieldLang1.setVisible(true);
             textFieldLang2.setVisible(true);
             submitWordPairButton.setVisible(true);
@@ -109,7 +117,9 @@ public class RepeatWordsController {
             textLanTo1.setVisible(true);
 
             try {
-                RepeatWordsEngineClass rwengn = new RepeatWordsEngineClass(langUserTransFrom, langUserTransTo);
+
+                RepeatWordsEngineClass rwengn = new RepeatWordsEngineClass(langUserTransFrom, langUserTransTo,
+                        Integer.parseInt(textFieldNumberofWords.getText().trim()));
                 rwengn.createWordsSetOfStartLanguage();
 
                 if(!rwengn.wordsSetUserTranslFromIsEmpty()){
